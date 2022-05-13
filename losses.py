@@ -3,7 +3,7 @@ from itertools import chain, repeat
 import torch
 import torch.nn.functional as F
 
-from utils.pose_operations import plot_3d_landmark_torch, pose_full_image_to_bbox
+from img2pose.repo.utils.pose_operations import plot_3d_landmark_torch, pose_full_image_to_bbox
 
 
 def fastrcnn_loss(

@@ -3,8 +3,11 @@ from torch.nn import DataParallel, Module
 from torch.nn.parallel import DistributedDataParallel
 from torchvision.models.detection.backbone_utils import resnet_fpn_backbone
 
-from model_loader import load_model
-from models import FasterDoFRCNN
+from .model_loader import load_model
+from .models import FasterDoFRCNN
+from utils import logger
+
+log = logger.create_logger(__name__)
 
 
 class WrappedModel(Module):

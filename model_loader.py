@@ -3,7 +3,7 @@ from os import path
 import torch
 
 try:
-    from utils.dist import is_main_process
+    from img2pose.repo.utils.dist import is_main_process
 except Exception as e:
     print(e)
 

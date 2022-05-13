@@ -10,10 +10,10 @@ from torchvision.models.detection.transform import GeneralizedRCNNTransform
 from torchvision.ops import MultiScaleRoIAlign
 from torchvision.ops import boxes as box_ops
 
-from generalized_rcnn import GeneralizedRCNN
-from losses import fastrcnn_loss
-from rpn import AnchorGenerator, RegionProposalNetwork, RPNHead
-from utils.pose_operations import transform_pose_global_project_bbox
+from .generalized_rcnn import GeneralizedRCNN
+from .losses import fastrcnn_loss
+from .rpn import AnchorGenerator, RegionProposalNetwork, RPNHead
+from img2pose.repo.utils.pose_operations import transform_pose_global_project_bbox
 
 
 class FastRCNNDoFPredictor(nn.Module):
