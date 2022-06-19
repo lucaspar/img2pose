@@ -1,3 +1,4 @@
+"""Img2Pose is a tool for estimating 3D pose from a 2D image."""
 import torch
 from torch.nn import DataParallel, Module
 from torch.nn.parallel import DistributedDataParallel
@@ -5,9 +6,13 @@ from torchvision.models.detection.backbone_utils import resnet_fpn_backbone
 
 from .model_loader import load_model
 from .models import FasterDoFRCNN
-from utils import logger
 
-log = logger.create_logger(__name__)
+try:
+    from pareidolia.utils import logger
+
+    log = logger.create_logger(__name__)
+except ImportError:
+    pass
 
 
 class WrappedModel(Module):
